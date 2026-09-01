@@ -43,3 +43,5 @@ next-env.d.ts
 # drizzle
 /drizzle
 .env.local
+
+.wrangler/*
