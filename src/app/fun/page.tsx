@@ -12,7 +12,8 @@ import { HalloweenSidePanel } from "@/components/fun/halloween/SidePanel";
 
 import { useState } from "react";
 
-const halloweenMode = true;
+const date = new Date();
+const halloweenMode = date.getMonth() === 10 && date.getDay() >= 25;
 
 export default function Fun() {
   const [cookiesAccepted, setCookiesAccepted] = useState<boolean>(false);
@@ -39,8 +40,8 @@ export default function Fun() {
             backgroundImage: "url(/glitch.webp)",
             backgroundSize: "30vw 30vw",
           }}
-        >
           <div className="z-10 bg-zinc-950 max-w-7xl [font-family:serif] flex flex-col h-dvh [box-shadow:_0px_0px_50px_30px_rgba(0,_0,_0,_1)]">
+>
             <div className="w-full h-dvh flex flex-row">
               <div className="h-full w-2/3">
                 <div className="w-full flex justify-center ">
